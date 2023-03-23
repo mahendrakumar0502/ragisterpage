@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fun()
+    {
+        h1r=document.getElementsByTagName("h1")[0]
+        h1r=innerHTML=h1r.innerHTML+" "+localStorage.getItem("name")
+    }
+    setTimeout (fun,500)
+    function fun1()
+    {
+        localStorage.removeItem("uid")
+        localStorage.removeItem("pwd")
+        localStorage.removeItem("name")
+        window.location="ragister.html"
+    }
+   
+</script>
+<body>
+    <nav>
+        <a href="ragister.html">ragister</a>
+        <a href="login.html">login</a>
+
+    </nav>
+    <h1> home page of </h1>
+    <button onclick="fun1()">remove user</button>
+</body>
+</html>

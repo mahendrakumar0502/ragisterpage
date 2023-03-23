@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(event)
+        {
+            event.preventDefault()
+            let itr=document.getElementsByTagName("input")
+
+        
+            localStorage.setItem("uid",itr[0].value)
+            localStorage.setItem("name",itr[1].value)
+            localStorage.setItem("pwd",itr[2].value)
+            window.location="./login.html"
+            
+        }
+       
+
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="ragister.html">ragister</a>
+        <a href="login.html">login</a>
+    </nav>
+    <form onsubmit="fun(event)">
+        <input type="text" name="uid"  placeholder="uid"> <br>
+        <input type="text" name="name" placeholder="name"> <br>
+        <input type="password" name="pwd" placeholder="password"> <br>
+      
+        <input type="submit" name="ragister" >
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fun(event)
+    {
+        event.preventDefault()
+        let itr=document.getElementsByTagName("input")
+        let uuid=itr[0].value
+        let upwd=itr[1].value
+        uid=localStorage.getItem("uid")
+        pwd=localStorage.getItem("pwd")
+       
+   
+    if(uuid==uid && upwd==pwd)
+    {
+         window.location="home.html"
+    }
+    else{
+         window.location="ragister.html"
+    } 
+    }
+</script>
+<body>
+    <nav>
+        <a href="ragister.html">ragister</a>
+        <a href="login.html">login</a>
+    </nav>
+    
+    <form onsubmit="fun(event)">
+         <input type="text" name="uid"  placeholder="uid"> <br>
+        <input type="password" name="pwd"  placeholder="password"> <br>
+        <input type="submit" name="login"  >
+    </form>
+</body>
+</html>
